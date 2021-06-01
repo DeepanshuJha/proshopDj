@@ -78,7 +78,7 @@ const OrderScreen = ({ match, history }) => {
                 setSdkReady(true)
             }
         }
-    }, [order, orderId, successPay, dispatch, successDeliver])
+    }, [order, orderId, successPay, dispatch, successDeliver, history, userInfo])
 
     const successPaymentHandler = (paymentResult) => {
         console.log(paymentResult)
@@ -225,7 +225,7 @@ const OrderScreen = ({ match, history }) => {
                                             onClick={deliverHandler}
                                         >
                                             Mark As Delivered
-                                        </Button>
+                    </Button>
                                     </ListGroup.Item>
                                 )}
                         </ListGroup>
